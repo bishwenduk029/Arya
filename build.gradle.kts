@@ -65,7 +65,7 @@ tasks.create("buildNLUImage", DockerBuildImage::class.java){
 }
 
 tasks.create("buildAryaBot", DockerBuildImage::class.java){
-    dependsOn("buildFrontend")
+    dependsOn(":frontend:buildFrontend")
     inputDir.set(file("./"))
     images.add("arya/bot:v0.0.1")
 }
