@@ -9,3 +9,8 @@ nlu:
     - What language do you speak?
     - Do you speak with tongue?
     - why do you talk so much?
+- intent: introduction
+  examples: |-
+    - What is your name?
+    - what are you called?
+    - what name do you go by

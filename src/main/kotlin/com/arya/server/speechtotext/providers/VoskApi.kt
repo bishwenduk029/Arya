@@ -1,6 +1,6 @@
 package com.arya.server.speechtotext.providers
 
-import com.arya.server.speechtotext.ITextToSpeech
+import com.arya.server.speechtotext.ISpeechToText
 import com.fasterxml.jackson.databind.ObjectMapper
 import jakarta.inject.Singleton
 import mu.KotlinLogging
@@ -13,7 +13,7 @@ import java.io.FileInputStream
 private val logger = KotlinLogging.logger(VoskApi::class.java.canonicalName)
 
 @Singleton
-class VoskApi : ITextToSpeech {
+class VoskApi : ISpeechToText {
     private val model = Model(javaClass.classLoader.getResource("vosk/vosk-model-small-en-in-0.4")?.path)
 
     override fun parse(wavFile: File): String {

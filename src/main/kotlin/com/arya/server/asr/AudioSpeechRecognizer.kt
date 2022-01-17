@@ -1,6 +1,6 @@
 package com.arya.server.asr
 
-import com.arya.server.speechtotext.ITextToSpeech
+import com.arya.server.speechtotext.ISpeechToText
 import io.micronaut.websocket.WebSocketSession
 import jakarta.inject.Singleton
 import mu.KotlinLogging
@@ -15,7 +15,7 @@ import java.io.*
 private val logger = KotlinLogging.logger(AudioSpeechRecognizer::class.java.canonicalName)
 
 @Singleton
-class AudioSpeechRecognizer(private val speechToTextTransformer: ITextToSpeech, private val nluService: RasaService) {
+class AudioSpeechRecognizer(private val speechToTextTransformer: ISpeechToText, private val nluService: RasaService) {
 
     fun recognizeIntent(audio: ByteArray, session: WebSocketSession): String {
         logger.info { "Initiating Speech Recognition" }

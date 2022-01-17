@@ -22,4 +22,11 @@ class GreetingsIntentHandler {
 
     }
 
+    @Intent("introduction")
+    @Questions(["What is your name?", "what are you called?", "what name do you go by"])
+    @Answer("I am Amy.")
+    fun intro(question: String){
+
+    }
+
 }
