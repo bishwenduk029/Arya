@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  nlu:
+    image: arya/nlu:v0.0.1
+    ports:
+      - "5005:5005"
+
+  bot:
+    image: arya/bot:v0.0.1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - nlu

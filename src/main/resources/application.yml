@@ -1,0 +1,10 @@
+micronaut:
+  application:
+    name: arya
+  router:
+    static-resources:
+      arya:
+        enabled: true
+        paths:
+          - classpath:app
+        mapping: /**

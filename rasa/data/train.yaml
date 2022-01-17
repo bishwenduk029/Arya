@@ -1,0 +1,11 @@
+nlu:
+- intent: greet
+  examples: |-
+    - What's up [Sara](name)?
+    - How are you [Sara](name)?
+    - How are you doing [Sara](name)?
+- intent: faq
+  examples: |-
+    - What language do you speak?
+    - Do you speak with tongue?
+    - why do you talk so much?
