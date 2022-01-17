@@ -36,3 +36,4 @@ build
 **/**/node_modules
 src/main/resources/vosk/**
 src/main/resources/app/**
+gradle
