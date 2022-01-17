@@ -59,6 +59,7 @@ subprojects {
 }
 
 tasks.create("buildNLUImage", DockerBuildImage::class.java){
+    dependsOn("buildFrontend")
     dependsOn("build")
     inputDir.set(file("./rasa"))
     images.add("arya/nlu:v0.0.1")
